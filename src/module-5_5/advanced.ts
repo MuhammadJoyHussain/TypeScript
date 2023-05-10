@@ -21,9 +21,14 @@ class User implements model {
     methods: IMethods;
 
     constructor(firstName: string, lastName: string) {
-        this.data = { firstName, lastName }
+        this.data = { firstName, lastName };
         this.methods = {
-            fullName: () => `${firstName} ${lastName}`
-        }
+            fullName: () => `${firstName} ${lastName}`,
+        };
     }
 }
+
+const user = new User('Joynul', 'Hussain');
+
+console.log(user.methods.fullName());
+
